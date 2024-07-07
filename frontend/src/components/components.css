@@ -1,0 +1,108 @@
+.app-bar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0px;
+  background-color: rgba(28, 37, 54, 0.9);
+  z-index: 100;
+}
+
+.app-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+  z-index: 101;
+}
+
+.app-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  height: 32px;
+}
+
+.pipeline-name {
+  padding: 6px 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.toolbar-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 76px 24px 0;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  background: linear-gradient(
+    186.78802629404288deg,
+    rgba(130, 206, 243, 0.1) 0%,
+    rgba(144, 57, 255, 0.1) 47.634127736091614%,
+    rgba(48, 11, 106, 0.1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 10px;
+}
+
+.toolbar-container.collapsed {
+  transform: translateX(-100%);
+}
+
+.toolbar-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.draggable-node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  padding-top: 4px;
+  width: 80px;
+  height: 60px;
+  color: rgba(28, 37, 54, 0.8);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 10px;
+  font-size: 13.5px;
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+.draggable-node span {
+  color: rgba(28, 37, 54, 0.8);
+}
+
+.react-flow-wrapper {
+  width: 100vw;
+  height: calc(100vh - 56px);
+}
+
+.react-flow-panel {
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  height: 318px;
+  z-index: 5;
+}
+
+.alert {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 1000;
+}
